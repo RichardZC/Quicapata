@@ -1,0 +1,5 @@
+﻿
+--proyecto de inicio Hra.App
+--correr sobre el proyecto Hra.Infraestructure.Data
+scaffold-DbContext -Connection Name=connectionDB Microsoft.EntityFrameworkCore.SqlServer -f -NoPluralize
+

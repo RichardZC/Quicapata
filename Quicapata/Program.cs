@@ -1,7 +1,11 @@
+using Dominio;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<QUICAPATAContext>(db => db.UseSqlServer(builder.Configuration.GetConnectionString("connectionDB")));
 
 var app = builder.Build();
 
